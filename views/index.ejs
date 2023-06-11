@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hodlinfo Clone</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+  </head>
+  <body>
+    <span><u>Crypto</u></span>
+    <br><br>
+       <table>
+        <tr>
+          <th>#</th>
+          <th>Platform</th>
+          <th>Last Traded Price</th>
+          <th>Buy / Sell Price</th>
+          <th>Difference</th>
+          <th>Savings</th>
+        </tr>
+        <% var i=0;%>
+        <% tickers.forEach(function(ticker) { i++; %>
+          <tr>
+            <td><%= i %></td>
+            <td><%= ticker.platform %></td>
+            <td><%= ticker.lastTradedPrice %></td>
+            <td><%= ticker.buySellPrice %></td>
+            <td><%= ticker.difference %></td>
+            <td><%= ticker.savings %></td>
+          </tr>
+        <%}); %>
+      </table>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+   
+  </body>
+  
+</html>
